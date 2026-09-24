@@ -1,0 +1,21 @@
+export const defaultValues = (lead?: any) => ({
+  lead_source: lead?.lead_source || "",
+  company_name: lead?.company_name || "",
+  contact_person: lead?.contact_person || "",
+  contact_number: lead?.contact_number || "",
+  email: lead?.email || "",
+  lead_identifier_name: lead?.lead_identifier_name || "",
+  address: {
+    street: lead?.address?.street || "",
+    city: lead?.address?.city || "",
+    state: lead?.address?.state || "",
+    postal_code: lead?.address?.postal_code || "",
+    country: lead?.address?.country || "UAE",
+  },
+  lead_status: lead?.lead_status || "New",
+  lead_score: lead?.lead_score || null,
+  next_steps: lead?.next_steps || "",
+  assigned_to: lead?.assigned_to?._id || "",
+  comments: lead?.comments || "",
+  customer_reference: lead?.customer_reference?._id || null,
+});

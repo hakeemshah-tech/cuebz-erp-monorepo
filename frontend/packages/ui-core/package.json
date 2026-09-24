@@ -1,0 +1,41 @@
+{
+  "name": "ui-core",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Shared UI primitives and table/form abstractions for the admin dashboard.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx --max-warnings 0",
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@tanstack/react-table": "^8.20.5",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-datepicker": "^7.5.0",
+    "react-dom": "18.3.1",
+    "react-dropzone": "^14.2.9",
+    "react-hook-form": "^7.53.0",
+    "react-icons": "^5.3.0",
+    "recharts": "^2.12.7",
+    "rizzui": "^0.8.7",
+    "simplebar-react": "^3.2.6",
+    "tailwind-merge": "^2.5.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "typescript": "^5.6.3",
+    "typescript-config": "workspace:*"
+  }
+}

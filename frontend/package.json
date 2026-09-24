@@ -1,0 +1,46 @@
+{
+  "name": "enterprise-erp-frontend",
+  "version": "7.4.0",
+  "description": "Turborepo monorepo: multi-tenant admin dashboard and marketing site.",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "build": "turbo build",
+    "start": "turbo start",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
+    "cache:clean": "turbo cache:clean && rm -rf .turbo",
+    "dashboard:dev": "turbo dev --filter=admin-dashboard",
+    "dashboard:lint": "turbo lint --filter=admin-dashboard",
+    "dashboard:build": "turbo build --filter=admin-dashboard",
+    "dashboard:start": "turbo start --filter=admin-dashboard",
+    "dashboard:clean": "turbo clean --filter=admin-dashboard",
+    "landing:dev": "turbo dev --filter=landing",
+    "landing:lint": "turbo lint --filter=landing",
+    "landing:build": "turbo build --filter=landing",
+    "landing:start": "turbo start --filter=landing",
+    "landing:clean": "turbo clean --filter=landing",
+    "dashboard:build:uat": "cross-env NODE_ENV=uat turbo build --filter=admin-dashboard",
+    "dashboard:start:uat": "cross-env NODE_ENV=uat turbo start --filter=admin-dashboard",
+    "dashboard:build:prod": "cross-env NODE_ENV=production turbo build --filter=admin-dashboard",
+    "dashboard:start:prod": "cross-env NODE_ENV=production turbo start --filter=admin-dashboard",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "turbo": "2.1.3",
+    "typescript-config": "workspace:*"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
